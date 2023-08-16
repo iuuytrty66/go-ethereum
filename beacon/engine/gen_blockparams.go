@@ -32,8 +32,7 @@ func (p PayloadAttributes) MarshalJSON() ([]byte, error) {
 // UnmarshalJSON unmarshals from JSON.
 func (p *PayloadAttributes) UnmarshalJSON(input []byte) error {
 	type PayloadAttributes struct {
-		Timestamp             *hexutil.Uint64     `json:"timestamp"             gencodec:"required"`
-		Random                *common.Hash        `json:"prevRandao"            gencodec:"required"`
+		            *common.Hash        `json:"prevRandao"            gencodec:"required"`
 		SuggestedFeeRecipient *common.Address     `json:"suggestedFeeRecipient" gencodec:"required"`
 		Withdrawals           []*types.Withdrawal `json:"withdrawals"`
 	}
